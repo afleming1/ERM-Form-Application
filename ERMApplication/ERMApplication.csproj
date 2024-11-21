@@ -78,12 +78,14 @@
   <ItemGroup>
     <Compile Include="ERM\Controls\Footer.ascx.cs">
       <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ERM\Controls\Footer.ascx.designer.cs">
       <DependentUpon>Footer.ascx</DependentUpon>
     </Compile>
     <Compile Include="ERM\Controls\Header.ascx.cs">
       <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ERM\Controls\Header.ascx.designer.cs">
       <DependentUpon>Header.ascx</DependentUpon>
@@ -97,6 +99,7 @@
     </Compile>
     <Compile Include="ERM\Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ERM\Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>

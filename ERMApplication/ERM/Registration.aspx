@@ -1,6 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ERM/Site.Master" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="ERMApplication.ERM.Registration" %>
 
 <asp:Content ID="Content" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
+    <asp:Panel ID="ErrorPanel" Visible="false" runat="server">
+        <div class="alert alert-danger" role="alert">
+            <b>Error: <asp:Label ID="ErrorMessage" runat="server" Text=""></asp:Label></b>
+        </div>
+    </asp:Panel>
+    
     <h2>Symposium Registration</h2>
     <br />
 
@@ -146,7 +152,7 @@
                     <tr>
                         <td>
                             <asp:DropDownList ID="listRates" Width="425px" runat="server">
-                                <asp:ListItem Text="[Select a rate]" Value="NULL" Selected="True"></asp:ListItem>
+                                <asp:ListItem Text="[Select a Rate]" Value="NULL" Selected="True"></asp:ListItem>
                                 <asp:ListItem Text="CAS, CIA, SOA Member" Value="Member"></asp:ListItem>
                                 <asp:ListItem Text="Non-Member" Value="Non-Member"></asp:ListItem>
                                 <asp:ListItem Text="Dues Waiver" Value="Waiver"></asp:ListItem>
@@ -217,7 +223,7 @@
     <br />
 
     <p>
-        <asp:Button ID="buttonSubmit" runat="server" Text="Submit" />
-        <asp:Button ID="buttonCancel" runat="server" Text="Cancel" />
+        <asp:Button ID="buttonSubmit" CssClass="btn btn-primary" runat="server" Text="Submit" OnClick="buttonSubmit_Click" />
+        <asp:Button ID="buttonCancel" CssClass="btn btn-secondary" runat="server" Text="Cancel" OnClick="buttonCancel_Click" />
     </p>    
 </asp:Content>
