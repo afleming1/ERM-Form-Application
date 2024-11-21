@@ -120,7 +120,7 @@ namespace ERMApplication.ERM
             try
             {
                 string connectionString = ConfigurationManager.ConnectionStrings["ERMConnection"].ConnectionString;
-                string SQL = "INSERT INTO RegistrationTable (RegID, FirstName, LastName, Email, Address, City, State, Rates, Lunch, Audio, Visual, Mobile, DateTimeCreated) VALUES (@RegID, @FirstName, @LastName, @EmailAddress, @Rate, @Lunch, @Audio, @Visual, @Mobile, @DateTimeCreated)";
+                string SQL = "INSERT INTO RegistrationTable (RegID, FirstName, LastName, EmailAddress, Address, City, State, Rates, Lunch, Audio, Visual, Mobile, DateTimeCreated) VALUES (@RegID, @FirstName, @LastName, @EmailAddress, @Address, @City, @State, @Rate, @Lunch, @Audio, @Visual, @Mobile, @DateTimeCreated)";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -129,7 +129,7 @@ namespace ERMApplication.ERM
                     command.Parameters.AddWithValue("@RegID", Guid.NewGuid().ToString());
 
                     command.Parameters.AddWithValue("@FirstName", textFirstName.Text);
-                    command.Parameters.AddWithValue("@FirstName", textLastName.Text);
+                    command.Parameters.AddWithValue("@LastName", textLastName.Text);
 
                     command.Parameters.AddWithValue("@EmailAddress", textEmail.Text);
 
