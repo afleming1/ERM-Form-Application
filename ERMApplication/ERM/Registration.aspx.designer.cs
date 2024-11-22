@@ -240,22 +240,22 @@ namespace ERMApplication.ERM
         protected global::System.Web.UI.WebControls.CheckBox checkAudio;
 
         /// <summary>
-        /// CheckVisual control.
+        /// checkVisual control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckVisual;
+        protected global::System.Web.UI.WebControls.CheckBox checkVisual;
 
         /// <summary>
-        /// CheckMobile control.
+        /// checkMobile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckMobile;
+        protected global::System.Web.UI.WebControls.CheckBox checkMobile;
 
         /// <summary>
         /// buttonSubmit control.

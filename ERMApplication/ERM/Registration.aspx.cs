@@ -163,8 +163,8 @@ namespace ERMApplication.ERM
                     }
 
                     command.Parameters.AddWithValue("@Audio", checkAudio.Checked);
-                    command.Parameters.AddWithValue("@Visual", CheckVisual.Checked);
-                    command.Parameters.AddWithValue("@Mobile", CheckMobile.Checked);
+                    command.Parameters.AddWithValue("@Visual", checkVisual.Checked);
+                    command.Parameters.AddWithValue("@Mobile", checkMobile.Checked);
 
                     command.Parameters.AddWithValue("@DateTimeCreated", DateTime.Now);
 

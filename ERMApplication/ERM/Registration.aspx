@@ -211,8 +211,8 @@
                     <tr>
                         <td>
                             <asp:CheckBox ID="checkAudio" Text="&nbsp;Audio Assistance" runat="server" />&nbsp;&nbsp;
-                            <asp:CheckBox ID="CheckVisual" Text="&nbsp;Visual Assistance" runat="server" />&nbsp;&nbsp;
-                            <asp:CheckBox ID="CheckMobile" Text="&nbsp;Mobile Assistance" runat="server" />&nbsp;&nbsp;
+                            <asp:CheckBox ID="checkVisual" Text="&nbsp;Visual Assistance" runat="server" />&nbsp;&nbsp;
+                            <asp:CheckBox ID="checkMobile" Text="&nbsp;Mobile Assistance" runat="server" />&nbsp;&nbsp;
                         </td>
                     </tr>
                 </table>
