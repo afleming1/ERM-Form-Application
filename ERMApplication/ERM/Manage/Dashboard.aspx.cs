@@ -19,7 +19,7 @@ namespace ERMApplication.ERM.Manage
         protected void DisplayGrid()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["ERMConnection"].ConnectionString;
-            string SQL = "SELECT RegID, FirstName + ' ' + LastName AS Name, CONVERT(varchar, DateTimeCreated, 1) AS DateTimeCreated FROM RegistrationTable WHERE IsDeleted = 0 ORDER BY Name";
+            string SQL = "SELECT RegID, FirstName + ' ' + LastName AS Name, EmailAddress, CONVERT(varchar, DateTimeCreated, 1) AS DateTimeCreated FROM RegistrationTable WHERE IsDeleted = 0 ORDER BY Name";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

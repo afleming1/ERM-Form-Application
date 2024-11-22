@@ -11,7 +11,8 @@
 
                 <asp:GridView ID="RegistrationGrid" AutoGenerateColumns="false" AllowPaging="true" PageSize="3" PagerStyle-HorizontalAlign="Center" GridLines="Both" Width="772px" CellSpacing="5" CellPadding="5" DataKeyNames="RegID" runat="server" OnPageIndexChanging="RegistrationGrid_PageIndexChanging">
                     <Columns>
-                        <asp:HyperLinkField DataNavigateUrlFields="RegID" DataNavigateUrlFormatString="View.aspx?id={0}" DataTextField="Name" HeaderText="Registration Name" ItemStyle-Width="582px" />
+                        <asp:HyperLinkField DataNavigateUrlFields="RegID" DataNavigateUrlFormatString="View.aspx?id={0}" DataTextField="Name" HeaderText="Registration Name" ItemStyle-Width="291px" />
+                        <asp:BoundField DataField="EmailAddress" HeaderText="Registration Email" HeaderStyle-HorizontalAlign="Center" ItemStyle-Width="291px" />
                         <asp:BoundField DataField="DateTimeCreated" HeaderText="Registration Date" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" ItemStyle-Width="190px" />
                     </Columns>
                 </asp:GridView>

@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Runtime.InteropServices.WindowsRuntime;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace ERMApplication.ERM
 {
@@ -11,97 +14,71 @@ namespace ERMApplication.ERM
 
         }
 
+        /// <summary>
+        /// Displays error panel
+        /// </summary>
+        /// <param name="shouldDisplay">Should the error panel display</param>
+        /// <param name="errorText">The error text</param>
+        /// <param name="textBox">The corresponding control</param>
+        /// <returns>False</returns>
+        protected bool DisplayErrorPanel(bool shouldDisplay, string errorText, Control control)
+        {
+            if (shouldDisplay == true)
+            {
+                ErrorPanel.Visible = true;
+                ErrorMessage.Text = errorText;
+
+                control.Focus();
+
+                return false;
+            }
+            else
+            {
+                return true;
+            }            
+        }
+
         protected bool VerifyForm()
         {
             if (textFirstName.Text == string.Empty)
             {
-                ErrorPanel.Visible = true;
-                ErrorMessage.Text = "Please provide your first name";
-
-                textFirstName.Focus();
-
-                return false;
+                return DisplayErrorPanel(true, "Please provide your first name", textFirstName);
             }
             else if (textLastName.Text == string.Empty)
             {
-                ErrorPanel.Visible = true;
-                ErrorMessage.Text = "Please provide your last first name";
-
-                textLastName.Focus();
-
-                return false;
+                return DisplayErrorPanel(true, "Please provide your last first name", textLastName);
             }
             else if (textEmail.Text == string.Empty)
             {
-                ErrorPanel.Visible = true;
-                ErrorMessage.Text = "Please provide your email address";
-
-                textEmail.Focus();
-
-                return false;
+                return DisplayErrorPanel(true, "Please provide your email address", textEmail);    
             }
             else if (textConfirmEmail.Text == string.Empty)
             {
-                ErrorPanel.Visible = true;
-                ErrorMessage.Text = "Please confirm your email address";
-
-                textConfirmEmail.Focus();
-
-                return false;
+                return DisplayErrorPanel(true, "Please confirm your email address", textConfirmEmail);
             }
             else if (textEmail.Text != textConfirmEmail.Text)
             {
-                ErrorPanel.Visible = true;
-                ErrorMessage.Text = "Please double check and confirm your email address";
-
-                textConfirmEmail.Focus();
-
-                return false;
+                return DisplayErrorPanel(true, "Please double check and confirm your email address", textConfirmEmail);
             }
             else if (textAddress.Text == string.Empty)
             {
-                ErrorPanel.Visible = true;
-                ErrorMessage.Text = "Please provide your address";
-
-                textAddress.Focus();
-
-                return false;
+                return DisplayErrorPanel(true, "Please provide your address", textAddress);
             }
             else if (textCity.Text == string.Empty)
             {
-                ErrorPanel.Visible = true;
-                ErrorMessage.Text = "Please provide your city";
-
-                textCity.Focus();
-
-                return false;
+                return DisplayErrorPanel(true, "Please provide your city", textCity);
             }
             else if (textState.Text == string.Empty)
             {
-                ErrorPanel.Visible = true;
-                ErrorMessage.Text = "Please provide your state";
-
-                textState.Focus();
-
-                return false;
+                return DisplayErrorPanel(true, "Please provide your state", textState);
             }
             else if (listRates.SelectedValue == "NULL")
             {
-                ErrorPanel.Visible = true;
-                ErrorMessage.Text = "Please select a rate";
-
-                listRates.Focus();
-
-                return false;
+                return DisplayErrorPanel(true, "Please select a rate", listRates);
             }
             else if (optionRegular.Checked == false && optionKosher.Checked == false && optionVegetarian.Checked == false && optionVegan.Checked == false && optionFruit.Checked == false && optionGluten.Checked == false && optionLactose.Checked == false)
             {
-                ErrorPanel.Visible = true;
-                ErrorMessage.Text = "Please choose a lunch option";
-
-                optionRegular.Focus();
-
-                return false;
+                return DisplayErrorPanel(true, "Please choose a lunch option", optionRegular);
             }
             else
             {
