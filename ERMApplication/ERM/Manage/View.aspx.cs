@@ -13,5 +13,20 @@ namespace ERMApplication.ERM.Manage
         {
 
         }
+
+        protected void buttonEdit_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Edit.aspx?id=" + Request.QueryString["id"]);
+        }
+
+        protected void buttonDelete_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Delete.aspx?id=" + Request.QueryString["id"]);
+        }
+
+        protected void buttonCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Dashboard.aspx");
+        }
     }
 }
