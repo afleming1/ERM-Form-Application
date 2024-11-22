@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,7 +13,80 @@ namespace ERMApplication.ERM.Manage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            GetDetails(Request.QueryString["id"]);
+        }
 
+        protected void GetDetails(string RegID)
+        {
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["ERMConnection"].ConnectionString;
+                string SQL = "SELECT * FROM RegistrationTable WHERE RegID = '" + RegID + "';";
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand command = new SqlCommand(SQL, connection)
+                    {
+                        Connection = connection
+                    };
+
+                    command.Connection.Open();
+
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            labelFirstName.Text = reader["FirstName"].ToString();
+                            labelLastName.Text = reader["LastName"].ToString();
+
+                            labelEmail.Text = reader["EmailAddress"].ToString();
+
+                            labelAddress.Text = reader["Address"].ToString();
+                            labelCity.Text = reader["City"].ToString();
+                            labelState.Text = reader["State"].ToString();
+
+                            labelRates.Text = reader["Rates"].ToString();
+                            labelLunch.Text = reader["Lunch"].ToString();
+
+                            if (reader["Audio"].ToString() == "1")
+                            {
+                                labelAudio.Text = "Yes";
+                            }
+                            else
+                            {
+                                labelAudio.Text = "No";
+                            }
+
+                            if (reader["Visual"].ToString() == "1")
+                            {
+                                labelVisual.Text = "Yes";
+                            }
+                            else
+                            {
+                                labelVisual.Text = "No";
+                            }
+
+                            if (reader["Mobile"].ToString() == "1")
+                            {
+                                labelMobile.Text = "Yes";
+                            }
+                            else
+                            {
+                                labelMobile.Text = "No";
+                            }
+                        }
+                    }
+
+                    reader.Close();
+                    connection.Close();
+                }
+            }
+            catch
+            {
+
+            }
         }
 
         protected void buttonEdit_Click(object sender, EventArgs e)

@@ -39,7 +39,7 @@
                 <table>
                     <tr>
                         <td>
-                            <asp:Label ID="lblAddress" runat="server"></asp:Label>
+                            <asp:Label ID="labelAddress" runat="server"></asp:Label>
                         </td>
                     </tr>
                 </table>
@@ -122,11 +122,9 @@
                 <table>
                     <tr>
                         <td>
-                            <p>
-                                <asp:Label ID="labelAudio" runat="server"></asp:Label>
-                                <asp:Label ID="labelVisual" runat="server"></asp:Label>
-                                <asp:Label ID="labelMobile" runat="server"></asp:Label>
-                            </p>
+                            <p>Audio Assistance: <asp:Label ID="labelAudio" runat="server"></asp:Label></p>
+                            <p>Visual Assistance: <asp:Label ID="labelVisual" runat="server"></asp:Label></p>
+                            <p>Mobile Assistance: <asp:Label ID="labelMobile" runat="server"></asp:Label></p>
                         </td>
                     </tr>
                 </table>
