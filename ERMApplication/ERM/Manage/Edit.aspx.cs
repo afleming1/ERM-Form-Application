@@ -16,8 +16,8 @@ namespace ERMApplication.ERM.Manage
 
         protected void GetDetails(string RegID)
         {
-            //try
-            //{
+            try
+            {
                 string connectionString = ConfigurationManager.ConnectionStrings["ERMConnection"].ConnectionString;
                 string SQL = "SELECT * FROM RegistrationTable WHERE RegID = '" + RegID + "';";
 
@@ -94,11 +94,11 @@ namespace ERMApplication.ERM.Manage
                     reader.Close();
                     connection.Close();
                 }
-            //}
-            //catch
-            //{
+            }
+            catch
+            {
 
-            //}
+            }
         }
 
         protected bool VerifyForm()
@@ -201,12 +201,12 @@ namespace ERMApplication.ERM.Manage
 
         protected bool UpdateRegistration(string RegID)
         {
-            //try
-            //{
+            try
+            {
                 string connectionString = ConfigurationManager.ConnectionStrings["ERMConnection"].ConnectionString;
-            string SQL = "UPDATE RegistrationTable SET FirstName = @FirstName, LastName = @LastName, EmailAddress = @EmailAddress, Address = @Address, City = @City, State = @State, Rates = @Rates, Lunch = @Lunch, Audio = @Audio, Visual = @Visual, Mobile = @Mobile, DateTimeModified = @DateTimeModified WHERE RegID = @RegID;";
+                string SQL = "UPDATE RegistrationTable SET FirstName = @FirstName, LastName = @LastName, EmailAddress = @EmailAddress, Address = @Address, City = @City, State = @State, Rates = @Rates, Lunch = @Lunch, Audio = @Audio, Visual = @Visual, Mobile = @Mobile, DateTimeModified = @DateTimeModified WHERE RegID = @RegID;";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     SqlCommand command = new SqlCommand(SQL, connection);
 
@@ -264,11 +264,11 @@ namespace ERMApplication.ERM.Manage
                 }
 
                 return true;
-            //}
-            //catch
-            //{
-                //return false;
-            //}
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         protected void buttonUpdate_Click(object sender, EventArgs e)
