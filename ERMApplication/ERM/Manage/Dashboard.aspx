@@ -20,6 +20,8 @@
                 <p>
                     <asp:Label ID="labelNoRecords" Visible="false" runat="server" Text="There are no results to show in this view"></asp:Label>
                 </p>
+
+                <asp:Button ID="buttonCreateNewRecord" CssClass="btn btn-primary" runat="server" Text="Add New Record" OnClick="buttonCreateNewRecord_Click" />
             </td>
         </tr>
     </table>

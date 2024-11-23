@@ -52,5 +52,10 @@ namespace ERMApplication.ERM.Manage
 
             DisplayGrid();
         }
+
+        protected void buttonCreateNewRecord_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Add.aspx");
+        }
     }
 }

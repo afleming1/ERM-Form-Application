@@ -74,6 +74,7 @@
     <Content Include="ERM\ErrorPages\404.aspx" />
     <Content Include="ERM\ErrorPages\Error.aspx" />
     <Content Include="ERM\Images\ERM-Banner.jpg" />
+    <Content Include="ERM\Manage\Add.aspx" />
     <Content Include="ERM\Manage\Dashboard.aspx" />
     <Content Include="ERM\Manage\Default.aspx" />
     <Content Include="ERM\Manage\Delete.aspx" />
@@ -126,6 +127,13 @@
     </Compile>
     <Compile Include="ERM\ErrorPages\Error.aspx.designer.cs">
       <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ERM\Manage\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERM\Manage\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
     </Compile>
     <Compile Include="ERM\Manage\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
