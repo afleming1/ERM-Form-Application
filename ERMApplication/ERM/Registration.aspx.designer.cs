@@ -168,67 +168,13 @@ namespace ERMApplication.ERM
         protected global::System.Web.UI.WebControls.DropDownList listRates;
 
         /// <summary>
-        /// optionRegular control.
+        /// optionLunches control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton optionRegular;
-
-        /// <summary>
-        /// optionKosher control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton optionKosher;
-
-        /// <summary>
-        /// optionVegetarian control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton optionVegetarian;
-
-        /// <summary>
-        /// optionVegan control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton optionVegan;
-
-        /// <summary>
-        /// optionFruit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton optionFruit;
-
-        /// <summary>
-        /// optionGluten control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton optionGluten;
-
-        /// <summary>
-        /// optionLactose control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton optionLactose;
+        protected global::System.Web.UI.WebControls.RadioButtonList optionLunches;
 
         /// <summary>
         /// checkAudio control.
