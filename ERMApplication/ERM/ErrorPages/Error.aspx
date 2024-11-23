@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ERM/Site.Master" AutoEventWireup="true" CodeBehind="Error.aspx.cs" Inherits="ERMApplication.ERM.Error" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ERM/Site.Master" AutoEventWireup="true" CodeBehind="Error.aspx.cs" Inherits="ERMApplication.ERM.ErrorPages.Error" %>
 
 <asp:Content ID="Content" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
     <h2>Error</h2>

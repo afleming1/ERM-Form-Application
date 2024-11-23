@@ -168,7 +168,7 @@ namespace ERMApplication.ERM
                 }
                 else
                 {
-                    Response.Redirect("Error.aspx");
+                    Response.Redirect("/ERM/ErrorPages/Error.aspx");
                 }
             }
         }        

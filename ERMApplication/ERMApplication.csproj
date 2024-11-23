@@ -71,7 +71,8 @@
     <Content Include="ERM\Controls\Footer.ascx" />
     <Content Include="ERM\Controls\Header.ascx" />
     <Content Include="ERM\Default.aspx" />
-    <Content Include="ERM\Error.aspx" />
+    <Content Include="ERM\ErrorPages\404.aspx" />
+    <Content Include="ERM\ErrorPages\Error.aspx" />
     <Content Include="ERM\Images\ERM-Banner.jpg" />
     <Content Include="ERM\Manage\Dashboard.aspx" />
     <Content Include="ERM\Manage\Default.aspx" />
@@ -112,11 +113,18 @@
     <Compile Include="ERM\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ERM\Error.aspx.cs">
+    <Compile Include="ERM\ErrorPages\404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ERM\ErrorPages\404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ERM\ErrorPages\Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ERM\Error.aspx.designer.cs">
+    <Compile Include="ERM\ErrorPages\Error.aspx.designer.cs">
       <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
     <Compile Include="ERM\Manage\Dashboard.aspx.cs">

@@ -67,7 +67,7 @@ namespace ERMApplication.ERM.Manage
                 }
                 else
                 {
-                    Response.Redirect("Error.aspx");
+                    Response.Redirect("/ERM/ErrorPages/Error.aspx");
                 }
             }
         }

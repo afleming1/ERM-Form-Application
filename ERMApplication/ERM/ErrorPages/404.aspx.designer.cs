@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ERMApplication.ERM
+namespace ERMApplication.ERM.ErrorPages
 {
 
 
-    public partial class Error
+    public partial class _404
     {
     }
 }

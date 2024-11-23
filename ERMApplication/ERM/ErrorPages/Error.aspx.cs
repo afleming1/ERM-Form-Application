@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ERMApplication.ERM
+namespace ERMApplication.ERM.ErrorPages
 {
     public partial class Error : System.Web.UI.Page
     {
