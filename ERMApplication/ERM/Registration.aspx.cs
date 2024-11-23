@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace ERMApplication.ERM
 {

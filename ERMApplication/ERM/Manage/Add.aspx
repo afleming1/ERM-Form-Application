@@ -180,13 +180,15 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:RadioButton ID="optionRegular" GroupName="Lunch" Text="&nbsp;Regular" runat="server" />&nbsp;&nbsp;
-                            <asp:RadioButton ID="optionKosher" GroupName="Lunch" Text="&nbsp;Kosher" runat="server" />&nbsp;&nbsp;
-                            <asp:RadioButton ID="optionVegetarian" GroupName="Lunch" Text="&nbsp;Vegetarian" runat="server" />&nbsp;&nbsp;
-                            <asp:RadioButton ID="optionVegan" GroupName="Lunch" Text="&nbsp;Vegan" runat="server" />&nbsp;&nbsp;
-                            <asp:RadioButton ID="optionFruit" GroupName="Lunch" Text="&nbsp;Fruit Plate" runat="server" />&nbsp;&nbsp;
-                            <asp:RadioButton ID="optionGluten" GroupName="Lunch" Text="&nbsp;Gluten Free" runat="server" />&nbsp;&nbsp;
-                            <asp:RadioButton ID="optionLactose" GroupName="Lunch" Text="&nbsp;Lactose Free" runat="server" />&nbsp;&nbsp;
+                            <asp:RadioButtonList ID="optionLunches" RepeatDirection="Horizontal" runat="server">
+                                <asp:ListItem Text="&nbsp;Regular&nbsp;&nbsp;" Value="Regular"></asp:ListItem>
+                                <asp:ListItem Text="&nbsp;Kosher&nbsp;&nbsp;" Value="Kosher"></asp:ListItem>
+                                <asp:ListItem Text="&nbsp;Vegetarian&nbsp;&nbsp;" Value="Vegetarian"></asp:ListItem>
+                                <asp:ListItem Text="&nbsp;Vegan&nbsp;&nbsp;" Value="Vegan"></asp:ListItem>
+                                <asp:ListItem Text="&nbsp;Fruit Plate&nbsp;&nbsp;" Value="Fruit"></asp:ListItem>
+                                <asp:ListItem Text="&nbsp;Gluten Free&nbsp;&nbsp;" Value="Gluten"></asp:ListItem>
+                                <asp:ListItem Text="&nbsp;Lactose Free&nbsp;&nbsp;" Value="Lactose"></asp:ListItem>
+                            </asp:RadioButtonList>
                         </td>
                     </tr>
                 </table>

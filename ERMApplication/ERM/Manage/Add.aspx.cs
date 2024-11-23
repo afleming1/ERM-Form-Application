@@ -17,7 +17,7 @@ namespace ERMApplication.ERM.Manage
         /// </summary>
         /// <param name="shouldDisplay">Should the error panel display</param>
         /// <param name="errorText">The error text</param>
-        /// <param name="textBox">The corresponding control</param>
+        /// <param name="control">The corresponding control</param>
         /// <returns>False</returns>
         protected bool DisplayErrorPanel(bool shouldDisplay, string errorText, Control control)
         {
@@ -74,9 +74,9 @@ namespace ERMApplication.ERM.Manage
             {
                 return DisplayErrorPanel(true, "Please select a rate", listRates);
             }
-            else if (optionRegular.Checked == false && optionKosher.Checked == false && optionVegetarian.Checked == false && optionVegan.Checked == false && optionFruit.Checked == false && optionGluten.Checked == false && optionLactose.Checked == false)
+            else if (optionLunches.SelectedIndex == -1)
             {
-                return DisplayErrorPanel(true, "Please choose a lunch option", optionRegular);
+                return DisplayErrorPanel(true, "Please choose a lunch option", optionLunches);
             }
             else
             {
@@ -108,33 +108,29 @@ namespace ERMApplication.ERM.Manage
 
                     command.Parameters.AddWithValue("@Rate", listRates.SelectedValue);
 
-                    if (optionRegular.Checked == true)
+                    switch (optionLunches.SelectedValue)
                     {
-                        command.Parameters.AddWithValue(@"Lunch", "Regular");
-                    }
-                    else if (optionKosher.Checked == true)
-                    {
-                        command.Parameters.AddWithValue(@"Lunch", "Kosher");
-                    }
-                    else if (optionVegetarian.Checked == true)
-                    {
-                        command.Parameters.AddWithValue(@"Lunch", "Vegetarian");
-                    }
-                    else if (optionVegan.Checked == true)
-                    {
-                        command.Parameters.AddWithValue(@"Lunch", "Vegan");
-                    }
-                    else if (optionFruit.Checked == true)
-                    {
-                        command.Parameters.AddWithValue(@"Lunch", "Fruit Plate");
-                    }
-                    else if (optionGluten.Checked == true)
-                    {
-                        command.Parameters.AddWithValue(@"Lunch", "Gluten Free");
-                    }
-                    else if (optionLactose.Checked == true)
-                    {
-                        command.Parameters.AddWithValue(@"Lunch", "Lactose Free");
+                        case "Regular":
+                            command.Parameters.AddWithValue(@"Lunch", "Regular");
+                            break;
+                        case "Kosher":
+                            command.Parameters.AddWithValue(@"Lunch", "Kosher");
+                            break;
+                        case "Vegetarian":
+                            command.Parameters.AddWithValue(@"Lunch", "Vegetarian");
+                            break;
+                        case "Vegan":
+                            command.Parameters.AddWithValue(@"Lunch", "Vegan");
+                            break;
+                        case "Fruit":
+                            command.Parameters.AddWithValue(@"Lunch", "Fruit Plate");
+                            break;
+                        case "Gluten":
+                            command.Parameters.AddWithValue(@"Lunch", "Gluten Free");
+                            break;
+                        case "Lactose":
+                            command.Parameters.AddWithValue(@"Lunch", "Lactose Free");
+                            break;
                     }
 
                     command.Parameters.AddWithValue("@Audio", checkAudio.Checked);
